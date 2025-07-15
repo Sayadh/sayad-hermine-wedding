@@ -1,5 +1,5 @@
 <template>
-    <div class="wedding__invitation">
+    <div v-if="showBlock" class="wedding__invitation">
         <div class="wedding__invitation--info invitation__info">
             <div v-appear="{ name: 'slide-down', delay: 0 }" class="languageAction">
                 <button class="language" @click="$i18n.locale = $i18n.locale === 'am' ? 'ru' : 'am'">{{$i18n.locale}} | {{$i18n.locale == 'am' ? 'ru':'am'}}</button>
@@ -28,20 +28,23 @@
         <MainInfo />
         <Footer v-appear="{ name: 'zoom-in', delay: 0 }"/>
     </div>
+    <audio-autoplay @click="showBlock = true" />
 </template>
 
 
 <script setup>
 import CountDown from './CountDown.vue'
 import MainInfo from './MainInfo.vue'
-import dresscode from './dresscode.vue'
 import Footer from './Footer.vue'
-import Church from "@/components/firstpage/church.vue";
+import AudioAutoplay from "@/components/AudioAutoplay.vue";
+import {ref} from "vue";
+
+const showBlock = ref(false);
 </script>
 
 
 <style scoped lang="scss">
-*{
+* {
     margin: 0 0;
 }
 .wedding__invitation{

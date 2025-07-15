@@ -19,7 +19,7 @@
 <style scoped lang="scss">
 .church{
     display: flex;
-    margin-top: 100px;
+    margin-top: 80px;
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
@@ -47,6 +47,7 @@
     margin-top: 20px;
 }
 .churchWedding {
+    font-variant-caps: normal;
     font-size: 60px
 }
 .saintMaryMother {

@@ -241,7 +241,8 @@ onUnmounted(() => {
 .wedding__main--date {
     i {
         margin: 0;
-        font-size: 85px;
+        padding-top: 0;
+        font-size: 65px;
     }
 }
 @media screen and (min-width: 375px) and (max-width: 600px) {
