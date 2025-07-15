@@ -50,10 +50,10 @@ const startMusic = () => {
     background-image: url("../assets/Say-Hem.jpg");
     background-size: cover;
     background-position: center;
-    transform: scale(1); /* Սեղմում ենք նկարը */
-    filter: brightness(0.2);
+    transform: scale(1);
+    filter: brightness(0.25);
     z-index: -1;
-    opacity: .8;
+    opacity: .91;
 }
 
 /* Zoom in + fade in */

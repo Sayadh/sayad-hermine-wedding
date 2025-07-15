@@ -1,30 +1,30 @@
 <template>
     <div id="wedding__main" class="wedding__main">
-        <div  v-appear="{ name: 'zoom-in', delay: 300 }" >
-            <div class="wedding__main--entry">
+        <div>
+            <div v-appear="{ name: 'zoom-in', delay: 300 }" class="wedding__main--entry">
                 <p>{{$t('invitationText')}}</p>
             </div>
-            <div class="wedding__main--date">
+            <div v-appear="{ name: 'zoom-in', delay: 800 }" class="wedding__main--date">
                 <i>17 / 08 / 2025</i>
             </div>
             <church/>
         </div>
-        <div v-appear="{ name: 'zoom-in', delay: 500 }"  class="wedding__main--party party">
-            <img src="https://optim.tildacdn.one/tild3038-3065-4637-b133-336233373764/-/cover/600x600/center/center/-/format/webp/handisutyun2.png" alt="axnax">
+        <div class="wedding__main--party party">
+            <img v-appear="{ name: 'zoom-in', delay: 500 }" src="https://optim.tildacdn.one/tild3038-3065-4637-b133-336233373764/-/cover/600x600/center/center/-/format/webp/handisutyun2.png" alt="axnax">
             <div class="party__info">
-                <div class="party__info--title">
+                <div v-appear="{ name: 'zoom-in', delay: 800 }" class="party__info--title">
                     {{$t('weddingParty.title')}}
                 </div>
-                <div class="party__info--time">
+                <div v-appear="{ name: 'zoom-in', delay: 1000 }" class="party__info--time">
                     {{$t('weddingParty.time')}}
                 </div>
-                <div class="party__info--place">
+                <div v-appear="{ name: 'zoom-in', delay: 1200 }" class="party__info--place">
                     {{$t('weddingParty.place')}}
                 </div>
-                <div class="party__info--city">
+                <div v-appear="{ name: 'zoom-in', delay: 1400 }" class="party__info--city">
                     {{$t('weddingParty.city')}}
                 </div>
-                <img src="./img/Ginac.jpg" >
+                <img v-appear="{ name: 'zoom-in', delay: 1600 }" src="./img/Ginac.jpg" >
 
                 <div class="party__info--action">
                     <a style="cursor: pointer" target="_blank" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4040250cb4f6c25d:0x60f98dfd7dc435ee?entry=s&sa=X&ved=1t:8290&hl=en-GB&ictx=111" ><button v-if="showPartyButton" :class="{ visible: showPartyButton }" class="ceremony--action">{{$t('weddingParty.buttonText')}}</button></a>

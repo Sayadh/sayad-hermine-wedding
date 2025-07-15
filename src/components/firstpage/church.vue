@@ -1,15 +1,15 @@
 <template>
-  <div class="church">
-      <i class="churchWedding">{{ $t('churchWedding') }}</i>
-      <b style="font-size: 40px; color: white">15:30</b>
-      <i class="saintMaryMother">{{ $t('saintMaryMother') }}</i>
-    <div>
-        <img src="./img/church.jpg" >
+    <div v-appear="{ name: 'zoom-in', delay: 200 }" class="church">
+        <i class="churchWedding">{{ $t('churchWedding') }}</i>
+        <b style="font-size: 40px; color: white">15:30</b>
+        <i class="saintMaryMother">{{ $t('saintMaryMother') }}</i>
+        <div v-appear="{ name: 'zoom-in', delay: 500 }">
+            <img src="./img/church.jpg" >
+        </div>
+        <div class="party__info--action">
+            <a target="_blank" style="cursor: pointer" href="https://www.google.com/maps/place/Saint+Astvatsatsin+Church/@40.4612499,44.6500678,17z/data=!3m1!4b1!4m6!3m5!1s0x4040252562ba6525:0x11ef855446f2be16!8m2!3d40.4612499!4d44.6500678!16s%2Fg%2F11jydzg9rq?entry=ttu&g_ep=EgoyMDI1MDcwNi4wIKXMDSoASAFQAw%3D%3D" ><button class="ceremony--action">{{$t('weddingParty.buttonText')}}</button></a>
+        </div>
     </div>
-      <div class="party__info--action">
-          <a target="_blank" style="cursor: pointer" href="https://www.google.com/maps/place/Saint+Astvatsatsin+Church/@40.4612499,44.6500678,17z/data=!3m1!4b1!4m6!3m5!1s0x4040252562ba6525:0x11ef855446f2be16!8m2!3d40.4612499!4d44.6500678!16s%2Fg%2F11jydzg9rq?entry=ttu&g_ep=EgoyMDI1MDcwNi4wIKXMDSoASAFQAw%3D%3D" ><button class="ceremony--action">{{$t('weddingParty.buttonText')}}</button></a>
-      </div>
-  </div>
 </template>
 
 <script setup>
@@ -87,5 +87,27 @@
             height: 240px;
         }
     }
+}
+
+
+.animated {
+    opacity: 1;
+    transform: none;
+    transition: all 0.9s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* թեթև ներքև */
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(40px); /* ավելի շատ ներքև */
+}
+
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.85); /* փոքր չափից դեպի մեծ */
 }
 </style>

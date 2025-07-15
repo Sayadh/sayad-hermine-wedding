@@ -26,7 +26,7 @@
             </div>
         </div>
         <MainInfo />
-        <Footer v-appear="{ name: 'zoom-in', delay: 0 }"/>
+        <Footer v-appear="{ name: 'zoom-in', delay: 500 }"/>
     </div>
     <audio-autoplay @click="showBlock = true" />
 </template>
@@ -47,21 +47,22 @@ const showBlock = ref(false);
 * {
     margin: 0 0;
 }
-.wedding__invitation{
+.wedding__invitation {
     width: 100%;
     height: auto;
-    //min-height: 3500px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(./img/background.jpg);
     background-attachment: fixed;
-    &--info{
-        height: 700px;
+
+    &--info {
+        height: 670px;
         background: none;
         color: white;
     }
 }
+
 .invitation__info{
     padding-top: 40px;
     &--header{
@@ -134,7 +135,7 @@ const showBlock = ref(false);
         padding-top: 33px;
         flex-direction: column;
         align-items: center;
-        row-gap: 20px;
+        row-gap: 15px;
         font-family: 'MontserratARM';
         font-weight: 300;
 
@@ -148,6 +149,9 @@ const showBlock = ref(false);
         }
         & h1{
             font-size: 28px;
+        }
+        a {
+            margin-top: -10px;
         }
     }
 }
