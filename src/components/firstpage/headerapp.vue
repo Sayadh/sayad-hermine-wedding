@@ -25,8 +25,10 @@
                 </a>
             </div>
         </div>
+        <img  v-appear="{ name: 'zoom-in', delay: 800 }" src="@/assets/photo_2025-07-15 18.16.17.jpeg" class="photo" alt="">
+
         <MainInfo />
-        <Footer v-appear="{ name: 'zoom-in', delay: 500 }"/>
+        <Footer />
     </div>
     <audio-autoplay @click="showBlock = true" />
 </template>
@@ -276,4 +278,11 @@ const showBlock = ref(false);
     transform: scale(0.85); /* փոքր չափից դեպի մեծ */
 }
 
+
+.photo {
+    display: flex;
+    height: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
 </style>

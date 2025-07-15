@@ -7,14 +7,15 @@
             <div v-appear="{ name: 'zoom-in', delay: 800 }" class="wedding__main--date">
                 <i>17 / 08 / 2025</i>
             </div>
+            <img  v-appear="{ name: 'zoom-in', delay: 300 }" src="@/assets/photo_2025-07-15 18.16.19.jpeg" class="photo" alt="">
             <church/>
         </div>
-        <div class="wedding__main--party party">
+        <div  class="wedding__main--party party">
             <img v-appear="{ name: 'zoom-in', delay: 500 }" src="https://optim.tildacdn.one/tild3038-3065-4637-b133-336233373764/-/cover/600x600/center/center/-/format/webp/handisutyun2.png" alt="axnax">
             <div class="party__info">
-                <div v-appear="{ name: 'zoom-in', delay: 800 }" class="party__info--title">
+                <b v-appear="{ name: 'zoom-in', delay: 800 }" class="party__info--title">
                     {{$t('weddingParty.title')}}
-                </div>
+                </b>
                 <div v-appear="{ name: 'zoom-in', delay: 1000 }" class="party__info--time">
                     {{$t('weddingParty.time')}}
                 </div>
@@ -303,7 +304,7 @@ onUnmounted(() => {
 .animated {
     opacity: 1;
     transform: none;
-    transition: all 0.9s ease-out;
+    transition: all 1.5s ease-out;
 }
 
 .fade-in {
@@ -319,6 +320,14 @@ onUnmounted(() => {
 .zoom-in {
     opacity: 0;
     transform: scale(0.85); /* փոքր չափից դեպի մեծ */
+}
+
+
+.photo {
+    display: flex;
+    height: 580px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 </style>
