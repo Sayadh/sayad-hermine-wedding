@@ -12,17 +12,18 @@ import {useHead} from "@vueuse/head";
 
 
 useHead({
-    title: 'Sayad & Hermine Wedding',
+    title: 'Սայադ 🤍 Հերմինե',
     meta: [
         { name: 'description', content: 'Սիրով սպասում ենք Ձեզ մեր հարսանիքին' },
-        { property: 'og:title', content: 'Sayad & Hermine Wedding' },
+        { property: 'og:title', content: 'Սայադ 🤍 Հերմինե' },
         { property: 'og:description', content: 'Սիրով սպասում ենք Ձեզ մեր հարսանիքին' },
-        { property: 'og:image', content: 'https://yourdomain.com/cover.jpg' },
-        { property: 'og:url', content: 'https://yourdomain.com' },
+        { property: 'og:image', content: 'https://sayad-hermine.vercel.app/share.jpeg' },
+        { property: 'og:url', content: 'https://sayad-hermine.vercel.app' },
         { property: 'og:type', content: 'website' },
         { name: 'twitter:card', content: 'summary_large_image' },
     ]
 })
+
 
 </script>
 
