@@ -11,12 +11,12 @@
             <img  v-appear="{ name: 'zoom-in', delay: 300 }" src="https://optim.tildacdn.one/tild6136-3063-4932-b765-353738623430/-/resize/120x/-/format/webp/Hearts.png" alt="">
             <h1>{{$t('message')}}</h1>
         </div>
-        <div style="display: flex; flex-direction: row; margin-top: 20px; gap: 5px">
-            <b v-appear="{ name: 'slide-down', delay: 900 }" style="margin-top: -45px; font-size: 20px">Սայադ</b>
-            <div v-appear="{ name: 'zoom-in', delay: 600 }" style="font-size: 70px; color: #ff6b6b; margin: 0">
-                💞
+        <div style="display: flex; flex-direction: row; margin-top: 20px">
+            <i v-appear="{ name: 'slide-down', delay: 900 }" style="margin-top: -45px; font-size: 20px">Սայադ</i>
+            <div v-appear="{ name: 'zoom-in', delay: 600 }" style="margin: 0">
+                <img style="height: 80px; width: 80px" src="@/assets/heartMy.png" alt="">
             </div>
-            <b v-appear="{ name: 'slide-up', delay: 1200 }" style=" margin-top: 35px; font-size: 20px">Հերմինե</b>
+            <i v-appear="{ name: 'slide-up', delay: 1200 }" style=" margin-top: 35px; font-size: 20px">Հերմինե</i>
         </div>
     </div>
 </template>
