@@ -13,7 +13,9 @@
         </div>
         <div style="display: flex; flex-direction: row; margin-top: 20px; gap: 10px">
             <b v-appear="{ name: 'slide-down', delay: 900 }" style="margin-top: -45px; font-size: 20px">Սայադ</b>
-            <img v-appear="{ name: 'zoom-in', delay: 600 }" style="height: 70px; width: 70px;" src="@/assets/heart-pulse-2-svgrepo-com.svg" alt="">
+            <div v-appear="{ name: 'zoom-in', delay: 600 }" style="font-size: 70px; color: #ff6b6b; margin: 0">
+                💗
+            </div>
             <b v-appear="{ name: 'slide-up', delay: 1200 }" style=" margin-top: 35px; font-size: 20px">Հերմինե</b>
         </div>
     </div>
@@ -82,7 +84,7 @@ div {
 
 .photo {
     width: 100%;
-    height: 280px;
+    height: 250px;
     display: flex;
     margin: 0 auto;
 }

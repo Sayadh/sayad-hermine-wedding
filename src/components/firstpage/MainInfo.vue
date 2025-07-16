@@ -325,7 +325,7 @@ onUnmounted(() => {
 
 .photo {
     display: flex;
-    height: 580px;
+    height: 550px;
     margin: 0 auto;
     padding: 20px 0;
 }
