@@ -6,6 +6,7 @@ import { createI18n } from 'vue-i18n'
 import App from './App.vue'
 import router from './router'
 import vAppear from './directives/vAppear'
+import {createHead} from "@vueuse/head";
 
 
 const i18n = createI18n({
@@ -62,9 +63,10 @@ const i18n = createI18n({
   })
 
 const app = createApp(App)
-
+const head = createHead()
 app.use(createPinia())
 app.use(router)
 app.use(i18n)
+app.use(head)
 app.mount('#app')
 app.directive('appear', vAppear)
