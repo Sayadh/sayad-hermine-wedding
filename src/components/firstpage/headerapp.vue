@@ -1,5 +1,12 @@
 <template>
     <div v-if="showBlock" class="wedding__invitation">
+        <img
+            v-appear="{ name: 'zoom-in', delay: 0 }"
+            src="./img/background.jpg"
+            class="wedding__invitation__bg"
+            alt="Background"
+        />
+
         <div class="wedding__invitation--info invitation__info">
             <div v-appear="{ name: 'slide-down', delay: 0 }" class="languageAction">
                 <button class="language" @click="$i18n.locale = $i18n.locale === 'am' ? 'ru' : 'am'">{{$i18n.locale}} | {{$i18n.locale == 'am' ? 'ru':'am'}}</button>
@@ -50,13 +57,20 @@ const showBlock = ref(false);
     margin: 0 0;
 }
 .wedding__invitation {
+    position: relative;
     width: 100%;
     height: auto;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(./img/background.jpg);
-    background-attachment: fixed;
+    overflow: hidden;
+
+    &__bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+    }
 
     &--info {
         height: 670px;
@@ -177,7 +191,7 @@ const showBlock = ref(false);
     59% {
         opacity: 0;
         transform: scale(0.75, 0.75);
-        animation-timing-function: cubic-bezier(0.34,1.61,0.7,1);
+        animation-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
     }
     100% {
         opacity: 1;
@@ -185,9 +199,7 @@ const showBlock = ref(false);
     }
 }
 
-
 @keyframes nameanimation {
-
     0% {
         opacity: 0;
         transform: scale(1, 1);
@@ -201,15 +213,13 @@ const showBlock = ref(false);
     38% {
         opacity: 0;
         transform: scale(0.75, 0.75);
-        animation-timing-function: cubic-bezier(0.34,1.61,0.7,1);
+        animation-timing-function: cubic-bezier(0.34, 1.61, 0.7, 1);
     }
     100% {
         opacity: 1;
         transform: scale(1, 1);
     }
-
 }
-
 
 @keyframes ArrowUpDown {
     0% {
@@ -225,32 +235,27 @@ const showBlock = ref(false);
     }
 }
 
-
 @media only screen and (min-width: 375px) and (max-width: 600px) {
     .invitation__info {
-        &--header{
-
+        &--header {
             padding-left: 0;
             padding-top: 0;
-            & h1{
+
+            & h1 {
                 padding-left: 0;
                 width: auto;
             }
         }
-        & .languageAction{
+
+        & .languageAction {
             text-align: center;
-            & button{
-                margin: 0 0 20px 0
-            ;
+
+            & button {
+                margin: 0 0 20px 0;
             }
         }
-
     }
 }
-/*
-<h1>{{ $t('title') }}</h1>
-    <button @click="$i18n.locale = this.$i18n.locale === 'am' ? 'ru' : 'am'">{{$i18n.locale}} | {{$i18n.locale == 'am' ? 'ru':'am'}}</button>
- */
 
 .slide-down {
     opacity: 0;
@@ -265,19 +270,18 @@ const showBlock = ref(false);
 
 .fade-in {
     opacity: 0;
-    transform: translateY(20px); /* թեթև ներքև */
+    transform: translateY(20px);
 }
 
 .slide-up {
     opacity: 0;
-    transform: translateY(40px); /* ավելի շատ ներքև */
+    transform: translateY(40px);
 }
 
 .zoom-in {
     opacity: 0;
-    transform: scale(0.85); /* փոքր չափից դեպի մեծ */
+    transform: scale(0.85);
 }
-
 
 .photo {
     display: flex;
