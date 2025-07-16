@@ -8,22 +8,6 @@
 
 <script setup>
 import { RouterView } from 'vue-router'
-import {useHead} from "@vueuse/head";
-
-
-useHead({
-    title: 'Ս 🤍 Հ',
-    meta: [
-        { name: 'description', content: 'Սիրով սպասում ենք Ձեզ մեր հարսանիքին' },
-        { property: 'og:title', content: 'Սայադ 🤍 Հերմինե' },
-        { property: 'og:description', content: 'Սիրով սպասում ենք Ձեզ մեր հարսանիքին' },
-        { property: 'og:image', content: 'https://sayad-hermine-wedding.vercel.app/share.jpeg' },
-        { property: 'og:url', content: 'https://sayad-hermine-wedding.vercel.app' },
-        { property: 'og:type', content: 'website' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-    ]
-})
-
 
 </script>
 
