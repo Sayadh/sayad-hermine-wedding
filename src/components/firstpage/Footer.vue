@@ -31,6 +31,7 @@ img{
     height: 110px;
 }
 div {
+    text-align: center;
     display: flex;
     margin-top: 100px;
     flex-direction: column;

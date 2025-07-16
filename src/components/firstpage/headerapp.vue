@@ -289,4 +289,13 @@ const showBlock = ref(false);
     margin: 0 auto;
     padding: 20px 0;
 }
+@media screen and (max-width: 375px) {
+    .photo {
+        display: flex;
+        height: 470px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+}
 </style>

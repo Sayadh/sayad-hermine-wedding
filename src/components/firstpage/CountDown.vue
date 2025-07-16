@@ -113,8 +113,17 @@ p {
         font-family: 'MontserratARM', Arial, sans-serif;
     }
     .countdown>div>div:nth-child(2) {
-    font-size: 17px;
+        font-size: 17px;
+    }
 }
+@media screen and (max-width: 375px) {
+    .countdown>div>div:first-child {
+        font-size: 30px;
+        font-family: 'MontserratARM', Arial, sans-serif;
+    }
+    .countdown>div>div:nth-child(2) {
+        font-size: 15px;
+    }
 }
 
 

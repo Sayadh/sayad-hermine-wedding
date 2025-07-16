@@ -110,4 +110,16 @@
     opacity: 0;
     transform: scale(0.85); /* փոքր չափից դեպի մեծ */
 }
+
+
+@media screen and (max-width: 375px) {
+    .churchWedding {
+       font-size: 30px;
+    }
+    .saintMaryMother {
+        font-size: 16px;
+        text-align: center;
+    }
+
+}
 </style>

@@ -246,6 +246,7 @@ onUnmounted(() => {
         font-size: 65px;
     }
 }
+
 @media screen and (min-width: 375px) and (max-width: 600px) {
     .wedding__main {
         margin-top: -25px;
@@ -322,12 +323,31 @@ onUnmounted(() => {
     transform: scale(0.85); /* փոքր չափից դեպի մեծ */
 }
 
-
 .photo {
     display: flex;
     height: 550px;
     margin: 0 auto;
     padding: 20px 0;
+}
+
+
+@media screen and (max-width: 375px) {
+    .wedding__main--date {
+        i {
+            margin: 0;
+            padding-top: 0;
+            font-size: 45px;
+        }
+    }
+
+
+        .photo {
+            display: flex;
+            height: 480px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
 }
 
 </style>
