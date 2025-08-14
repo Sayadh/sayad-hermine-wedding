@@ -1,7 +1,7 @@
 <template>
     <div v-appear="{ name: 'zoom-in', delay: 200 }" class="church">
         <i class="churchWedding">{{ $t('churchWedding') }}</i>
-        <b style="font-size: 40px; color: white">15:30</b>
+        <b style="font-size: 40px; color: white">15:00</b>
         <i class="saintMaryMother">{{ $t('saintMaryMother') }}</i>
         <div v-appear="{ name: 'zoom-in', delay: 500 }">
             <img src="./img/church.jpg" >
